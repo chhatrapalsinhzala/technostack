@@ -1,0 +1,63 @@
+{% include "header.html" %}
+<body>
+
+    Create Employee List
+    <form method="post" action="{% url 'create_employee' %}" id = "create_employee" > 
+        <div class="form-group p_star">
+            {% csrf_token %}
+            <br><br>
+            <!-- {{ form.as_p }} -->
+            <div class="row">
+                <div class=col-md-1></div>
+                <div class="col-md-3">
+                    <br><br>
+                <p><label for="{{ form.first_name.id_for_label }}">First name:</label>
+                </div>
+                <div class="col-md-8">
+                    {{ form.first_name }}
+                </div></p>
+            </div>
+            <div class="row">
+                <div class=col-md-1></div>
+                <div class="col-md-3">
+                    <br><br>
+                <p><label for="{{ form.last_name.id_for_label }}">last name:</label>
+                </div>
+                <div class="col-md-8">
+                    {{ form.last_name }}
+                </div></p>
+            </div><div class="row">
+                <div class=col-md-1></div>
+                <div class="col-md-3">
+                    <br><br>
+                <p><label for="{{ form.phone.id_for_label }}">Phone:</label>
+                </div>
+                <div class="col-md-8">
+                    {{ form.phone }}
+                </div></p>
+            </div>
+            <div class="row">
+                <div class=col-md-1></div>
+                <div class="col-md-3">
+                    <br><br>
+                <p><label for="{{ form.email.id_for_label }}">Email:</label>
+                </div>
+                <div class="col-md-8">
+                    {{ form.email }}
+                </div></p>
+            </div>
+            <div class="row">
+                <div class=col-md-1></div>
+                <div class="col-md-3">
+                    <br><br>
+                <p><label for="{{ form.address.id_for_label }}">Address:</label>
+                </div>
+                <div class="col-md-8">
+                    {{ form.address }}
+                </div></p>
+            </div>
+    <!-- End footer Area -->
+
+</body>
+
+</html>
